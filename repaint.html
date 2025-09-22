@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Repaint</title>
+    <link href="./src/output.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body class="bg-neutral-100 scroll-smooth md:scroll-auto">
+    <nav class="bg-neutral-800 fixed w-full top-0 left-0 z-50">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <!-- Logo -->
+        <a
+          href="./index.html#home"
+          class="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <img src="./src/image/logo.png" class="w-14 h-auto" alt="RMT Logo" />
+        </a>
+
+        <!-- Tombol hamburger (hanya tampil di mobile) -->
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#facc15"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-10 text-yellow-400"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+
+        <!-- Menu Navigasi -->
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul
+            class="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg bg-neutral-100 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-neutral-800"
+          >
+            <li>
+              <a
+                href="./index.html#home"
+                class="block py-2 px-3 text-neutral-800 md:text-white md:p-0 hover:text-yellow-400 rounded"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="./index.html#services"
+                class="block py-2 px-3 text-neutral-800 md:text-white md:p-0 hover:text-yellow-400 rounded"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="./about.html#about"
+                class="block py-2 px-3 text-neutral-800 md:text-white md:p-0 hover:text-yellow-400 rounded"
+                >Tentang Kami</a
+              >
+            </li>
+            <li>
+              <a
+                href="./about.html#contact"
+                class="block py-2 px-3 text-neutral-800 md:text-white md:p-0 hover:text-yellow-400 rounded"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Detail Services Section -->
+    <section class="bg-neutral-900 text-neutral-100 py-16 px-6 mt-12 lg:px-20">
+      <div class="max-w-6xl mx-auto">
+        <!-- Judul dan Hero -->
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-4 text-yellow-400">
+            Repaint / Cat Ulang
+          </h2>
+          <p class="text-lg text-neutral-300 max-w-2xl mx-auto">
+            Layanan cat ulang profesional dengan hasil halus, warna presisi, dan
+            daya tahan lama agar kendaraan tampak baru dan berkelas.
+          </p>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="mb-12">
+          <img
+            src="./src/image/tune-up.jpg"
+            alt="Repair Service"
+            class="rounded-2xl shadow-lg w-full object-cover"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          />
+        </div>
+
+        <!-- Benefit -->
+        <div class="mb-12" data-aos="fade-right" data-aos-duration="2000">
+          <h3 class="text-2xl font-semibold mb-6">
+            Mengapa Memilih Layanan Kami?
+          </h3>
+          <ul class="grid md:grid-cols-2 gap-6">
+            <li class="flex items-start gap-3">
+              <span class="text-yellow-400 text-2xl">✓</span>
+              <p>Hasil cat halus dan mengkilap</p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-yellow-400 text-2xl">✓</span>
+              <p>Warna presisi sesuai pilihan</p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-yellow-400 text-2xl">✓</span>
+              <p>Menggunakan bahan cat berkualitas tinggi</p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-yellow-400 text-2xl">✓</span>
+              <p>Perlindungan dari karat dan cuaca ekstrem</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Proses Layanan -->
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold mb-6">Proses Layanan</h3>
+          <div
+            class="grid md:grid-cols-5 sm:grid-rows-1 sm:space-y-8 gap-6 text-center"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+          >
+            <div class="flex flex-col items-center">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-yellow-400 text-black rounded-full font-bold mb-3"
+              >
+                1
+              </div>
+              <p>Booking</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-yellow-400 text-black rounded-full font-bold mb-3"
+              >
+                2
+              </div>
+              <p>Persiapan Body</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-yellow-400 text-black rounded-full font-bold mb-3"
+              >
+                3
+              </div>
+              <p>Pengecetan</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-yellow-400 text-black rounded-full font-bold mb-3"
+              >
+                4
+              </div>
+              <p>Pengeringan</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-yellow-400 text-black rounded-full font-bold mb-3"
+              >
+                5
+              </div>
+              <p>Finishing</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Harga -->
+        <div
+          class="mb-12 text-center"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
+          <h3 class="text-2xl font-semibold mb-4">Harga</h3>
+          <p class="text-lg text-neutral-300">
+            Hubungi kami untuk penawaran harga terbaik sesuai kebutuhan
+            kendaraan Anda.
+          </p>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center" data-aos="fade-up" data-aos-duration="2000">
+          <a
+            href="https://wa.me/6281234567890"
+            target="_blank"
+            class="inline-block bg-yellow-400 text-black font-semibold py-3 px-8 rounded-lg shadow-lg border-2 border-neutral-100 hover:bg-yellow-500 transition"
+          >
+            Hubungi Kami
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-800 text-gray-300 py-10">
+      <div
+        class="max-w-screen-xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8"
+      >
+        <!-- Logo & Tagline -->
+        <div>
+          <h2 class="text-2xl font-bold text-[#FFD60A]">RMT Workshop</h2>
+          <p class="mt-3 text-sm">
+            Solusi perawatan dan perbaikan mobil Anda dengan layanan
+            profesional, cepat, dan terpercaya.
+          </p>
+        </div>
+
+        <!-- Navigasi -->
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-4">Navigasi</h3>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="./index.html#home" class="hover:text-[#FFD60A]">Home</a>
+            </li>
+            <li>
+              <a href="#services" class="hover:text-[#FFD60A]">Layanan</a>
+            </li>
+            <li>
+              <a href="/about.html" class="hover:text-[#FFD60A]"
+                >Tentang Kami</a
+              >
+            </li>
+            <li>
+              <a href="/about.html#contact" class="hover:text-[#FFD60A]"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Kontak -->
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-4">Kontak</h3>
+          <ul class="space-y-2 text-sm">
+            <li class="text-justify">
+              📍 8, Jl. Robusta III C No.6, RT.8/RW.6, Pd. Kopi, Kec. Duren
+              Sawit, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13460
+            </li>
+            <li>📞 +6281284411219</li>
+            <li>📧 rmtworkshop@email.com</li>
+            <li>🕒 Senin - Sabtu, 08.00 - 18.00</li>
+          </ul>
+        </div>
+
+        <!-- Sosial Media -->
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-4">Ikuti Kami</h3>
+          <div
+            class="flex space-x-4 mt-14 lg:mt-12 md:mt-8 sm:mt-4 lg:flex-row md:flex-col sm:flex-col lg:space-x-4 md:space-y-4 sm:space-y-4"
+          >
+            <a href="#" class="hover:text-[#FFD60A]" target="_blank"
+              ><img
+                src="./src/image/facebook.png"
+                alt="Facebook"
+                class="w-4 h-auto"
+              />
+              Facebook</a
+            >
+            <a
+              href="https://www.instagram.com/rmt.wahyudi/"
+              target="_blank"
+              class="hover:text-[#FFD60A]"
+              ><img
+                src="./src/image/instagram.png"
+                alt="Instagram"
+                class="w-4 h-auto"
+              />
+              Instagram</a
+            >
+            <a href="#" class="hover:text-[#FFD60A]" target="_blank"
+              ><img
+                src="./src/image/youtube.png"
+                alt="Youtube"
+                class="w-4 h-auto"
+              />
+              YouTube</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="border-t border-gray-600 mt-10 pt-6 text-center text-sm">
+        © 2025 RMT Workshop. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- Section Repair -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

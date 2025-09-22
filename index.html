@@ -7,37 +7,52 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body class="bg-neutral-100 scroll-smooth md:scroll-auto">
-    <nav class="max-w-screen-full bg-neutral-900">
+    <nav class="bg-neutral-800 fixed w-full top-0 left-0 z-50">
       <div
-        class="mx-12 flex flex-wrap items-center justify-between p-6 lg:mx-10 md:mx-auto"
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
       >
         <!-- Logo -->
         <a
-          href="/index.html"
+          href="./index.html#home"
           class="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <img src="./src/image/logo.png" alt="logo" class="w-16 h-auto" />
+          <img src="./src/image/logo.png" class="w-14 h-auto" alt="RMT Logo" />
         </a>
+
+        <!-- Tombol hamburger (hanya tampil di mobile) -->
         <button
           data-collapse-toggle="navbar-default"
           type="button"
-          class="inline-flex items-center p-2 w-12 h-auto justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
           aria-controls="navbar-default"
           aria-expanded="false"
         >
-          <span class="sr-only">Open Main Menu</span>
-          <img class="w-10" src="./src/image/menu.png" alt="menu" />
+          <span class="sr-only">Open main menu</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#facc15"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-10 text-yellow-400"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
         </button>
 
-        <!-- List Navbar -->
+        <!-- Menu Navigasi -->
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul
-            class="font-medium flex flex-col p-4 sm:p-4 md:p-0 mt-4 sm:border-gray-100 sm:rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 sm:bg-neutral-100 md:bg-neutral-900 lg:bg-neutral-900"
+            class="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg bg-neutral-100 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent"
           >
             <li>
               <a
                 href="#home"
-                class="block py-2 px-3 text-lg lg:text-neutral-100 bg-yellow-400 rounded-sm md:bg-transparent md:text-yellow-400 md:p-0 sm:pl-2 hover:text-yellow-400"
+                class="block py-2 px-3 text-neutral-800 md:text-white md:p-0 hover:text-yellow-400 rounded"
                 aria-current="page"
                 >Home</a
               >
@@ -45,22 +60,22 @@
             <li>
               <a
                 href="#services"
-                class="capitalize block py-2 px-3 text-lg md:text-neutral-100 sm:text-neutral-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-400 md:p-0"
-                >services</a
+                class="block py-2 px-3 text-neutral-800 md:text-white md:p-0 hover:text-yellow-400 rounded"
+                >Services</a
               >
             </li>
             <li>
               <a
-                href="./about.html"
-                class="capitalize block py-2 px-3 text-lg md:text-neutral-100 sm:text-neutral-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-400 md:p-0"
+                href="./about.html#about"
+                class="block py-2 px-3 text-neutral-800 md:text-white md:p-0 hover:text-yellow-400 rounded"
                 >Tentang Kami</a
               >
             </li>
             <li>
               <a
                 href="./about.html#contact"
-                class="capitalize block py-2 px-3 text-lg md:text-neutral-100 sm:text-neutral-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-400 md:p-0"
-                >contact</a
+                class="block py-2 px-3 text-neutral-800 md:text-white md:p-0 hover:text-yellow-400 rounded"
+                >Contact</a
               >
             </li>
           </ul>
@@ -94,7 +109,7 @@
             <button
               class="px-6 py-2 text-yellow-400 rounded-xl border-2 border-yellow-400 hover:text-neutral-100 hover:border-2 hover:border-neutral-100 bg-transparent hover:bg-yellow-500 transition duration-300 ease-in-out"
             >
-              <a href="#contact" class="font-medium">Contact</a>
+              <a href="./about.html#contact" class="font-medium">Contact</a>
             </button>
           </div>
         </div>
@@ -102,7 +117,7 @@
     </section>
 
     <!-- Section services -->
-    <section id="services" class="lg:my-24 md:my-8 sm:mt-8">
+    <section id="services" class="lg:my-32 md:my-8 sm:mt-8 scroll-mt-24">
       <div
         class="max-w-screen mx-auto lg:px-4 md:px-8 sm:px-12"
         data-aos="fade-up"
@@ -133,13 +148,39 @@
               Perbaikan menyeluruh untuk menjaga performa kendaraan tetap
               optimal, dengan tim profesional dan peralatan modern.
             </p>
-            <button type="button" class="mt-6 mb-3">
+
+            <!-- Detail -->
+            <div class="flex justify-between items-center">
+              <button type="button" class="mt-6 mb-3">
+                <a
+                  href="./about.html#contact"
+                  class="hover:text-neutral-100 text-lg py-2 px-6 hover:bg-yellow-500 hover:border-neutral-100 border-2 border-neutral-100 bg-yellow-400 text-neutral-100 transition duration-500 ease-in-out rounded-lg"
+                  >Contact</a
+                >
+              </button>
               <a
-                href="#contact"
-                class="hover:text-neutral-100 text-lg py-2 px-6 hover:bg-yellow-500 hover:border-neutral-100 border-2 border-neutral-100 bg-yellow-400 text-neutral-100 transition duration-500 ease-in-out rounded-lg"
-                >Contact</a
-              >
-            </button>
+                href="./repair.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Detail Service Repair"
+                class="font-thin text-lg hover:text-yellow-400 flex items-center gap-x-1 mt-2 text-neutral-100 transition duration-500 ease-in-out pr-2"
+                >Detail
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-5 h-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </a>
+            </div>
           </div>
           <!-- card 2 -->
 
@@ -158,13 +199,38 @@
               Optimalkan performa kendaraan anda dengan Tune Up rutin. Kami
               memastikan sistem mesin bekerja maksimal dan efisien.
             </p>
-            <button type="button" class="mt-6 mb-3">
+            <!-- Detail -->
+            <div class="flex justify-between items-center">
+              <button type="button" class="mt-6 mb-3">
+                <a
+                  href="./about.html#contact"
+                  class="hover:text-neutral-100 text-lg py-2 px-6 hover:bg-yellow-500 hover:border-neutral-100 border-2 border-neutral-100 bg-yellow-400 text-neutral-100 transition duration-500 ease-in-out rounded-lg"
+                  >Contact</a
+                >
+              </button>
               <a
-                href="#contact"
-                class="hover:text-neutral-100 text-lg py-2 px-6 hover:bg-yellow-500 hover:border-neutral-100 border-2 border-neutral-100 bg-yellow-400 text-neutral-100 transition duration-500 ease-in-out rounded-lg"
-                >Contact</a
-              >
-            </button>
+                href="./tuneUp.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Detail Service Repair"
+                class="font-thin text-lg hover:text-yellow-400 flex items-center gap-x-1 mt-2 text-neutral-100 transition duration-500 ease-in-out pr-2"
+                >Detail
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-5 h-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </a>
+            </div>
           </div>
 
           <!-- card 3 -->
@@ -173,24 +239,49 @@
             class="bg-neutral-900 rounded-2xl hover:shadow-2xl p-4 lg:p-4 md:p-6 sm:p-8"
           >
             <img
-              src="./src/image/Oil-Change.jpg"
+              src="./src/image/repaint.jpg"
               alt=""
-              class="w-full h-auto object-contain rounded-2xl"
+              class="w-full h-52 object-contain rounded-2xl sm:h-auto"
             />
-            <h3 class="text-2xl font-bold text-neutral-100 mt-10 text-left">
-              Ganti Oli
+            <h3 class="text-2xl font-bold text-neutral-100 mt-2 text-left">
+              Repaint / Cat Ulang
             </h3>
             <p class="text-md font-thin text-neutral-100/90 text-justify">
-              Layanan ganti oli cepat dan berkualitas dengan oli terabaik agar
-              mesin kendaraan lebih awet, halus, dan bertenaga.
+              Layanan cat ulang profesional menghadirkan hasil halus, warna
+              presisi, serta tahan lama agar kendaraan tampil baru dan berkelas.
             </p>
-            <button type="button" class="mt-6 mb-3">
+            <!-- Detail -->
+            <div class="flex justify-between items-center">
+              <button type="button" class="mt-6 mb-3">
+                <a
+                  href="./about.html#contact"
+                  class="hover:text-neutral-100 text-lg py-2 px-6 hover:bg-yellow-500 hover:border-neutral-100 border-2 border-neutral-100 bg-yellow-400 text-neutral-100 transition duration-500 ease-in-out rounded-lg"
+                  >Contact</a
+                >
+              </button>
               <a
-                href="#contact"
-                class="hover:text-neutral-100 text-lg py-2 px-6 hover:bg-yellow-500 hover:border-neutral-100 border-2 border-neutral-100 bg-yellow-400 text-neutral-100 transition duration-500 ease-in-out rounded-lg"
-                >Contact</a
-              >
-            </button>
+                href="./repaint.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Detail Service Repair"
+                class="font-thin text-lg hover:text-yellow-400 flex items-center gap-x-1 mt-2 text-neutral-100 transition duration-500 ease-in-out pr-2"
+                >Detail
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-5 h-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </a>
+            </div>
           </div>
 
           <!-- card 4 -->
@@ -202,20 +293,45 @@
               alt=""
               class="w-full h-auto object-contain rounded-2xl"
             />
-            <h3 class="text-2xl font-bold text-neutral-100 mt-10 text-left">
+            <h3 class="text-2xl font-bold text-neutral-100 mt-2 text-left">
               Towing Mobil
             </h3>
             <p class="text-md font-thin text-neutral-100/90 text-justify">
               Layanan Towing aman dan cepat untuk kendaraan anda. Siap membantu
               dalam kondisi darurat kapan pun dibutuhkan.
             </p>
-            <button type="button" class="mt-6 mb-3">
+            <!-- Detail -->
+            <div class="flex justify-between items-center">
+              <button type="button" class="mt-6 mb-3">
+                <a
+                  href="./about.html#contact"
+                  class="hover:text-neutral-100 text-lg py-2 px-6 hover:bg-yellow-500 hover:border-neutral-100 border-2 border-neutral-100 bg-yellow-400 text-neutral-100 transition duration-500 ease-in-out rounded-lg"
+                  >Contact</a
+                >
+              </button>
               <a
-                href="#contact"
-                class="hover:text-neutral-100 text-lg py-2 px-6 hover:bg-yellow-500 hover:border-neutral-100 border-2 border-neutral-100 bg-yellow-400 text-neutral-100 transition duration-500 ease-in-out rounded-lg"
-                >Contact</a
-              >
-            </button>
+                href="./towing.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Detail Service Repair"
+                class="font-thin text-lg hover:text-yellow-400 flex items-center gap-x-1 mt-2 text-neutral-100 transition duration-500 ease-in-out pr-2"
+                >Detail
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-5 h-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -345,7 +461,9 @@
               <a href="#services" class="hover:text-[#FFD60A]">Layanan</a>
             </li>
             <li>
-              <a href="/about.html" class="hover:text-[#FFD60A]">About Us</a>
+              <a href="/about.html" class="hover:text-[#FFD60A]"
+                >Tentang Kami</a
+              >
             </li>
             <li>
               <a href="/about.html#contact" class="hover:text-[#FFD60A]"
@@ -375,7 +493,7 @@
           <div
             class="flex space-x-4 mt-14 lg:mt-12 md:mt-8 sm:mt-4 lg:flex-row md:flex-col sm:flex-col lg:space-x-4 md:space-y-4 sm:space-y-4"
           >
-            <a href="#" class="hover:text-[#FFD60A]"
+            <a href="#" class="hover:text-[#FFD60A]" target="_blank"
               ><img
                 src="./src/image/facebook.png"
                 alt="Facebook"
@@ -383,7 +501,10 @@
               />
               Facebook</a
             >
-            <a href="#" class="hover:text-[#FFD60A]"
+            <a
+              href="https://www.instagram.com/rmt.wahyudi/"
+              target="_blank"
+              class="hover:text-[#FFD60A]"
               ><img
                 src="./src/image/instagram.png"
                 alt="Instagram"
@@ -391,7 +512,7 @@
               />
               Instagram</a
             >
-            <a href="#" class="hover:text-[#FFD60A]"
+            <a href="#" class="hover:text-[#FFD60A]" target="_blank"
               ><img
                 src="./src/image/youtube.png"
                 alt="Youtube"

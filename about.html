@@ -5,40 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
     <link rel="stylesheet" href="./src/output.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body class="bg-neutral-100 scroll-smooth md:scroll-auto">
     <!-- navbar -->
-    <nav class="max-w-screen bg-neutral-900">
+    <nav class="bg-neutral-800 fixed w-full top-0 left-0 z-50">
       <div
-        class="mx-12 flex flex-wrap items-center justify-between p-6 lg:mx-10 md:mx-auto"
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
       >
         <!-- Logo -->
         <a
-          href="/index.html"
+          href="./index.html#home"
           class="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <img src="./src/image/logo.png" alt="logo" class="w-16 h-auto" />
+          <img src="./src/image/logo.png" class="w-14 h-auto" alt="RMT Logo" />
         </a>
+
+        <!-- Tombol hamburger (hanya tampil di mobile) -->
         <button
           data-collapse-toggle="navbar-default"
           type="button"
-          class="inline-flex items-center p-2 w-12 h-auto justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
           aria-controls="navbar-default"
           aria-expanded="false"
         >
-          <span class="sr-only">Open Main Menu</span>
-          <img class="w-10" src="./src/image/menu.png" alt="menu" />
+          <span class="sr-only">Open main menu</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#facc15"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-10 text-yellow-400"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
         </button>
 
-        <!-- List Navbar -->
+        <!-- Menu Navigasi -->
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul
-            class="font-medium flex flex-col p-4 sm:p-4 md:p-0 mt-4 sm:border-gray-100 sm:rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 sm:bg-neutral-100 md:bg-neutral-900 lg:bg-neutral-900"
+            class="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg bg-neutral-100 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-neutral-800"
           >
             <li>
               <a
-                href="./index.html"
-                class="block py-2 px-3 text-lg lg:text-neutral-100 bg-yellow-400 rounded-sm md:bg-transparent md:text-yellow-400 md:p-0 sm:pl-2 hover:text-yellow-400"
+                href="./index.html#home"
+                class="block py-2 px-3 text-neutral-800 md:text-white md:p-0 hover:text-yellow-400 rounded"
                 aria-current="page"
                 >Home</a
               >
@@ -46,22 +62,22 @@
             <li>
               <a
                 href="./index.html#services"
-                class="capitalize block py-2 px-3 text-lg md:text-neutral-100 sm:text-neutral-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-400 md:p-0"
-                >services</a
+                class="block py-2 px-3 text-neutral-800 md:text-white md:p-0 hover:text-yellow-400 rounded"
+                >Services</a
               >
             </li>
             <li>
               <a
-                href="./about.html"
-                class="capitalize block py-2 px-3 text-lg md:text-neutral-100 sm:text-neutral-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-400 md:p-0"
-                >tentang kami</a
+                href="./about.html#about"
+                class="block py-2 px-3 text-neutral-800 md:text-white md:p-0 hover:text-yellow-400 rounded"
+                >Tentang Kami</a
               >
             </li>
             <li>
               <a
-                href="./index.html"
-                class="capitalize block py-2 px-3 text-lg md:text-neutral-100 sm:text-neutral-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-400 md:p-0"
-                >contact</a
+                href="./about.html#contact"
+                class="block py-2 px-3 text-neutral-800 md:text-white md:p-0 hover:text-yellow-400 rounded"
+                >Contact</a
               >
             </li>
           </ul>
@@ -72,7 +88,7 @@
     <!-- Section About -->
     <section
       id="about"
-      class="py-16 mb-12 lg:py-12 lg:mb-10 md:py-8 md:mb-8 sm:py-6 sm:mb-2"
+      class="py-16 my-16 lg:py-12 lg:my-14 md:py-8 md:my-12 sm:py-6 sm:my-10 scroll-mt-24"
     >
       <div
         class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-y-8 gap-x-12 items-center lg:p-4 md:p-8 sm:p-12"
@@ -132,13 +148,13 @@
     <!-- Section Contact -->
     <section
       id="contact"
-      class="py-16 mt-12 lg:py-12 lg:my-10 md:py-8 md:my-8 sm:py-6 sm:my-2"
+      class="py-16 mt-12 lg:py-12 lg:my-10 md:py-8 md:my-8 sm:py-6 sm:my-2 scroll-mt-24"
     >
       <div
         class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-start"
       >
         <!-- Info Kontak -->
-        <div>
+        <div data-aos="fade-right" data-aos-duration="3000">
           <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
             Hubungi Kami
           </h2>
@@ -194,11 +210,14 @@
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             class="rounded-2xl shadow-lg"
+            data-aos="fade-left"
+            data-aos-duration="3000"
           >
           </iframe>
         </div>
       </div>
     </section>
+
     <footer class="bg-neutral-900 text-gray-300 py-10">
       <div
         class="max-w-screen-xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8"
@@ -216,12 +235,16 @@
         <div>
           <h3 class="text-lg font-semibold text-white mb-4">Navigasi</h3>
           <ul class="space-y-2 text-sm">
-            <li><a href="#home" class="hover:text-[#FFD60A]">Home</a></li>
+            <li>
+              <a href="/index.html#home" class="hover:text-[#FFD60A]">Home</a>
+            </li>
             <li>
               <a href="#services" class="hover:text-[#FFD60A]">Layanan</a>
             </li>
             <li>
-              <a href="/about.html" class="hover:text-[#FFD60A]">About Us</a>
+              <a href="/about.html" class="hover:text-[#FFD60A]"
+                >Tentang Kami</a
+              >
             </li>
             <li>
               <a href="/about.html#contact" class="hover:text-[#FFD60A]"
@@ -249,7 +272,7 @@
         <div>
           <h3 class="text-lg font-semibold text-white mb-4">Ikuti Kami</h3>
           <div class="flex space-x-4 mt-14 flex-wrap">
-            <a href="#" class="hover:text-[#FFD60A]"
+            <a href="#" class="hover:text-[#FFD60A]" target="_blank"
               ><img
                 src="./src/image/facebook.png"
                 alt="Facebook"
@@ -257,7 +280,10 @@
               />
               Facebook</a
             >
-            <a href="#" class="hover:text-[#FFD60A]"
+            <a
+              href="https://www.instagram.com/rmt.wahyudi/"
+              class="hover:text-[#FFD60A]"
+              target="_blank"
               ><img
                 src="./src/image/instagram.png"
                 alt="Instagram"
@@ -265,7 +291,7 @@
               />
               Instagram</a
             >
-            <a href="#" class="hover:text-[#FFD60A]"
+            <a href="#" class="hover:text-[#FFD60A]" target="_blank"
               ><img
                 src="./src/image/youtube.png"
                 alt="Youtube"
@@ -282,5 +308,11 @@
         © 2025 RMT Workshop. All rights reserved.
       </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
