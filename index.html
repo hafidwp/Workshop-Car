@@ -96,10 +96,13 @@
           class="absolute inset-0 flex flex-col items-center justify-center px-4 text-center z-10"
         >
           <h1
-            class="text-lg font-bold text-neutral-100 leading-snug sm:text-xl md:text-3xl"
+            class="text-md sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 text-white"
           >
             Rawat Kendaraan Anda dengan Layanan Profesional dan Terpercaya DI
-            <span class="block mt-2 text-neutral-100">RMT</span>
+            <span
+              class="block mt-2 text-neutral-100 text-md sm:text-xl md:text-2xl lg:text-3xl"
+              >RMT</span
+            >
           </h1>
           <div
             class="mt-6 flex flex-col sm:flex-row gap-4 sm:gap-8 sm:max-w-none sm:space-x-8"
@@ -162,7 +165,7 @@
                 >
               </button>
               <a
-                href="./repair.html"
+                href="/Repair.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Detail Service Repair"
@@ -212,7 +215,7 @@
                 >
               </button>
               <a
-                href="./tuneUp.html"
+                href="/tuneUp.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Detail Service Repair"
@@ -263,7 +266,7 @@
                 >
               </button>
               <a
-                href="./repaint.html"
+                href="/repaint.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Detail Service Repair"
@@ -313,7 +316,7 @@
                 >
               </button>
               <a
-                href="./towing.html"
+                href="/towing.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Detail Service Repair"
@@ -533,6 +536,11 @@
       </div>
     </footer>
 
+    <script>
+      const navbar = document.getElementById("navbar");
+      const home = document.getElementById("home");
+      home.style.paddingTop = navbar.offsetHeight + "px";
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
