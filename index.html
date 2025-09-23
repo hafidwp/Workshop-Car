@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
     <link href="./src/output.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
@@ -84,30 +85,32 @@
     </nav>
 
     <!-- Section Home -->
-    <section id="home">
+    <section id="home" class="relative pt-20">
       <div class="max-w-screen mx-auto">
         <img
           src="./src/image/background.jpg"
           alt=""
-          class="relative z-0 w-full h-auto object-contain rounded-b-4xl"
+          class="w-full h-auto object-cover rounded-b-4xl"
         />
         <div
-          class="absolute z-10 max-w-screen top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center sm:top-1/3 md:top-1/2 lg:top-1/2"
+          class="absolute inset-0 flex flex-col items-center justify-center px-4 text-center z-10"
         >
           <h1
-            class="sm:text-md md:text-xl lg:text-3xl text-neutral-100 font-bold text-center"
+            class="text-lg font-bold text-neutral-100 leading-snug sm:text-xl md:text-3xl"
           >
             Rawat Kendaraan Anda dengan Layanan Profesional dan Terpercaya DI
             <span class="block mt-2 text-neutral-100">RMT</span>
           </h1>
-          <div class="mt-6 flex gap-y-4 space-x-32">
+          <div
+            class="mt-6 flex flex-col sm:flex-row gap-4 sm:gap-8 sm:max-w-none sm:space-x-8"
+          >
             <button
-              class="px-6 py-2 text-yellow-400 rounded-xl border-2 border-yellow-400 hover:text-neutral-100 hover:border-2 hover:border-neutral-100 bg-transparent hover:bg-yellow-500 transition duration-300 ease-in-out"
+              class="px-6 py-2 text-yellow-400 rounded-xl border-2 border-yellow-400 hover:text-neutral-100 hover:border-neutral-100 hover:bg-yellow-500 bg-transparent transition duration-300 ease-in-out font-medium text-center"
             >
               <a href="#services" class="font-medium">Services</a>
             </button>
             <button
-              class="px-6 py-2 text-yellow-400 rounded-xl border-2 border-yellow-400 hover:text-neutral-100 hover:border-2 hover:border-neutral-100 bg-transparent hover:bg-yellow-500 transition duration-300 ease-in-out"
+              class="px-6 py-2 text-yellow-400 rounded-xl border-2 border-yellow-400 hover:text-neutral-100 hover:border-neutral-100 hover:bg-yellow-500 bg-transparent transition duration-300 ease-in-out font-medium text-center"
             >
               <a href="./about.html#contact" class="font-medium">Contact</a>
             </button>
@@ -117,7 +120,7 @@
     </section>
 
     <!-- Section services -->
-    <section id="services" class="lg:my-32 md:my-8 sm:mt-8 scroll-mt-24">
+    <section id="services" class="pt-12 lg:my-32 md:my-8 sm:mt-8 scroll-mt-26">
       <div
         class="max-w-screen mx-auto lg:px-4 md:px-8 sm:px-12"
         data-aos="fade-up"
